@@ -61,6 +61,8 @@ public final class ConcurrentGUI extends JFrame {
         });
         up.addActionListener(l -> agent.setPositiveSign(true));
         down.addActionListener(l -> agent.setPositiveSign(false));
+
+        executor.shutdown();
     }
 
     private final class Agent implements Runnable {
